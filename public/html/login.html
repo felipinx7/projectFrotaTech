@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CONFIGURAÇÕES GOLOBAIS CSS  -->
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- LINK DA BIBLIOTECA FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- LINK DO TAIWIND PARA ESTILIZAÇÃO -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>FROTA-TECH</title>
+</head>
+
+<body>
+    <header class="flex flex-col w-full h-auto">
+        <!-- PARTE DAS INFORMAÇÃOES DA EMPRESA -->
+        <div
+            class="bg-[#0A1340] w-full h-[50%] flex gap-4 items-center px-4 max-sm:flex-col max-sm:gap-1 max-sm:py-2 max-sm:items-start">
+            <div class="flex gap-2 items-baseline justify-center py-4 max-sm:py-0">
+                <i class="fa-solid fa-envelope text-white text-[0.7rem]"></i>
+                <p class="text-white text-[0.7rem]">startupfrotatech@gmail.com</p>
+            </div>
+            <div class="flex gap-2 items-baseline justify-center">
+                <i class="fa-brands fa-whatsapp text-white text-[0.7rem]"></i>
+                <p class="text-white text-[0.7rem]">+55 (85) 99832-7277</p>
+            </div>
+        </div>
+    </header>
+    <!-- PARTE DA NAV-BAR -->
+    <nav
+        class="w-full h-[20%] flex items-center px-4 py-2 justify-between bg-[#D9D9D9] max-lg:flex-col max-lg:justify-start shadow">
+        <div class="max-lg:w-full w-auto h-auto flex items-start">
+            <img src="../image/LOGO PROTOTIPO FROTATECH.png" class="w-[16rem] h-[5%] max-lg:flex items-start"
+                alt="Logo">
+        </div>
+
+        <!-- Menu de Navegação em dispositivos móveis -->
+        <div class="lg:hidden flex text-[1.5rem] items-end justify-end absolute right-[20px] py-[0.333rem]">
+            <button id="menu-toggle" class="text-[#0A1340]">
+                <i id="hamburger-icon" class="fa-solid fa-bars"></i> <!-- Ícone de menu hamburguer -->
+                <i id="close-icon" class="fa-solid fa-xmark hidden"></i>
+                <!-- Ícone de fechar (inicialmente escondido) -->
+            </button>
+        </div>
+
+        <!-- Menu de Navegação para telas grandes -->
+        <ul id="menu" class="hidden lg:flex items-center w-[70%] justify-between gap-20 px-4">
+            <li><a href="#home"
+                    class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Home</a>
+            </li>
+            <li><a href="#QuemSomos"
+                    class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Quem
+                    Somos</a></li>
+            <li><a href="#Avaliacao"
+                    class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Avaliação</a>
+            </li>
+            <li><a href="#FaleConosco"
+                    class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Fale
+                    Conosco</a></li>
+            <li><button
+                    class="bg-transparent border-[3px] border-[#0A1340] font-bold text-[1.2rem] hover:bg-[#0A1340] hover:text-white transition-all ease-in-out duration-[0.4s] rounded-[1rem] p-2 w-[100%]"><a
+                        href="../html/login.html">Cadastre-se</a></button></li>
+        </ul>
+
+        <!-- Menu em dispositivos móveis (inicialmente escondido) -->
+        <ul id="mobile-menu" class="lg:hidden flex flex-col items-start gap-5 w-full px-4 py-2 bg-[#D9D9D9] hidden">
+            <li><a href="#home"
+                    class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Home</a>
+            </li>
+            <li><a href="#QuemSomos"
+                    class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Quem
+                    Somos</a></li>
+            <li><a href="#Avaliacao"
+                    class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Avaliação</a>
+            </li>
+            <li><a href="#FaleConosco"
+                    class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Fale
+                    Conosco</a></li>
+            <li><button
+                    class="bg-transparent border-[3px] border-[#0A1340] font-bold text-[1.2rem] hover:bg-[#0A1340] hover:text-white transition-all ease-in-out duration-[0.4s] rounded-[1rem] p-2 w-[100%]"><a
+                        href="../html/login.html">Cadastre-se</a></button></li>
+        </ul>
+    </nav>
+    <!-- CRIAÇÃO DA SECTION GERAL  -k->
+    <section class="w-full min-h-[80vh] bg-[#F2F2F2] flex items-start justify-center py-[4rem]">
+        <div
+            class="relative w-[90%] h-[30rem] flex rounded-[20px] bg-white overflow-hidden  max-lg:flex-col max-lg:min-h-[100vh] max-lg:h-auto">
+            <img src="../image/caminhão.png" class="absolute top-0 right-0">
+            <div
+                class="z-[1000] flex flex-col bg-[#0A1340] p-2 w-[20%] items-center gap-4 justify-center max-lg:w-full max-lg:py-[3rem]">
+                <img src="../image/logobranca.png" class="w-[13rem]" alt="">
+                <h1 class="text-center text-white font-bold text-[1.4rem]">Bem-vindo(a)!</h1>
+                <p class="text-white font-[300] text-[1.2rem] text-center">Não tem uma conta para sua empresa? Crie uma
+                    agora mesmo.</p>
+                <button
+                    class="border-[3px] hover:bg-white hover:text-[#0A1340] transition-all duration-[0.4s] ease-in-out border-white w-[80%] py-2 font-bold text-white rounded-[1.9rem]"><a
+                        href="../html/register.html">CADASTAR</a></button>
+            </div>
+            <form
+                class="w-[80%] h-auto flex flex-col items-center justify-start py-5 z-[1000] max-lg:w-[100%] max-lg:px-3 ">
+                <h1 class="font-bold text-[#0A1340] text-[2.2rem]">Faça seu Login</h1>
+                <div
+                    class="flex items-center justify-center gap-10 w-full h-auto mt-[5rem] max-lg:flex-col max-lg:gap-4 max-lg:mt-[1rem]">
+                    <div class="flex flex-col gap-4 w-[80%] max-lg:w-full">
+                        <div>
+                            <input required type="text"
+                                class="relative bg-[#DFDCDC]  h-[4rem] focus:border-[3px] focus:border-[#0A1340] transition-all duration-0.3s ease-in-out focus:border-[#0A1340] w-full p-4 outline-none  rounded-[16px] placeholder:text-[1.2rem] placeholder:font[500] placeholder:text-[#837B7B] placeholder:text-[500] text-[500] font-[#0A1340] w-full py-4 px-16 outline-none  rounded-[16px]"
+                                placeholder="CPNJ">
+                            <i
+                                class="fa-solid fa-address-card absolute left-[29%] max-lg:left-[3%]  max-md:top-[58.5%] max-md:left-[4%] text-[#837B7B] text-[2.2rem] top-[35%] max-lg:top-[54.5%]"></i>
+                        </div>
+                        <div>
+                            <input required type="password"
+                                class="relative bg-[#DFDCDC]  h-[4rem] focus:border-[3px]  focus:border-[#0A1340] transition-all duration-0.3s ease-in-out focus:border-[#0A1340] w-full p-4 outline-none  rounded-[16px] placeholder:text-[1.2rem] placeholder:font[500] placeholder:text-[#837B7B] placeholder:text-[500] text-[500] font-[#0A1340] w-full py-4 px-16 outline-none  rounded-[16px]"
+                                placeholder="Senha">
+                            <i
+                                class="fa-solid fa-lock absolute left-[29%] max-lg:left-[3%] max-md:top-[70%] max-md:left-[4%] text-[#837B7B] text-[2.2rem] top-[51%] max-lg:top-[66%]"></i>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit"
+                    class="bg-[#0A1340] w-[50%] p-3 rounded-[5.97px] font-bold text-white text-[1.3rem] mt-[2rem] max-lg:w-full">ENTRAR</button>
+            </form>
+        </div>
+    </section>
+    <!-- CRIAÇÃO DO FOOTER  -->
+    <footer class="w-full h-[8rem] bg-[#0A1340] flex flex-col items-center justify-center gap-4">
+        <div class="font-[400] text-white text-center">&copy2025 FrotaTech. Todos os direitos reservados.</div>
+        <div class="flex items-center gap-8 justify-center">
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/navbar.js"></script>
+</body>
+
+</html>

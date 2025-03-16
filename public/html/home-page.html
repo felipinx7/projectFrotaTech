@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CONFIGURAÇÕES GOLOBAIS CSS  -->
+     <link rel="stylesheet" href="../css/index.css">
+    <!-- LINK DA BIBLIOTECA FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- LINK DO TAIWIND PARA ESTILIZAÇÃO -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../image/logocaminhao.png" type="image/x-icon">
+    <title>FROTA-TECH</title>
+</head>
+
+<body>
+    <header class="flex flex-col w-full h-auto">
+        <!-- PARTE DAS INFORMAÇÃOES DA EMPRESA -->
+        <div class="bg-[#0A1340] w-full h-[50%] flex gap-4 items-center px-4 max-sm:flex-col max-sm:gap-1 max-sm:py-2 max-sm:items-start">
+            <div class="flex gap-2 items-baseline justify-center py-4 max-sm:py-0">
+                <i class="fa-solid fa-envelope text-white text-[0.7rem]"></i>
+                <p class="text-white text-[0.7rem]">startupfrotatech@gmail.com</p>
+            </div>
+            <div class="flex gap-2 items-baseline justify-center">
+                <i class="fa-brands fa-whatsapp text-white text-[0.7rem]"></i>
+                <p class="text-white text-[0.7rem]">+55 (85) 99832-7277</p>
+            </div>
+        </div>
+    </header>
+    <!-- PARTE DA NAV-BAR -->  
+    <nav class="w-full h-[20%] flex items-center px-4 py-2 justify-between bg-[#D9D9D9] max-lg:flex-col max-lg:justify-start shadow">
+        <div class="max-lg:w-full w-auto h-auto flex items-start">
+            <img src="../image/LOGO PROTOTIPO FROTATECH.png" class="w-[16rem] h-[5%] max-lg:flex items-start" alt="Logo">
+        </div>
+        
+        <!-- Menu de Navegação em dispositivos móveis -->
+        <div class="lg:hidden flex text-[1.5rem] items-end justify-end absolute right-[20px] py-[0.333rem]">
+            <button id="menu-toggle" class="text-[#0A1340]">
+                <i id="hamburger-icon" class="fa-solid fa-bars"></i> <!-- Ícone de menu hamburguer -->
+                <i id="close-icon" class="fa-solid fa-xmark hidden"></i> <!-- Ícone de fechar (inicialmente escondido) -->
+            </button>
+        </div>
+
+        <!-- Menu de Navegação para telas grandes -->
+        <ul id="menu" class="hidden lg:flex items-center w-[70%] justify-between gap-20 px-4">
+            <li><a href="#home"class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Home</a></li>
+            <li><a href="#QuemSomos" class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Quem Somos</a></li>
+            <li><a href="#Avaliacao" class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Avaliação</a></li>
+            <li><a href="#FaleConosco" class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Fale Conosco</a></li>
+            <li><button class="bg-transparent border-[3px] border-[#0A1340] font-bold text-[1.2rem] hover:bg-[#0A1340] hover:text-white transition-all ease-in-out duration-[0.4s] rounded-[1rem] p-2 w-[100%]"><a href="../html/login.html">Cadastre-se</a></button></li>
+        </ul>
+
+        <!-- Menu em dispositivos móveis (inicialmente escondido) -->
+        <ul id="mobile-menu" class="lg:hidden flex flex-col items-start gap-5 w-full px-4 py-2 bg-[#D9D9D9] hidden">
+            <li><a href="#home" class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Home</a></li>
+            <li><a href="#QuemSomos" class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Quem Somos</a></li>
+            <li><a href="#Avaliacao" class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Avaliação</a></li>
+            <li><a href="#FaleConosco" class="text-[#0A1340] font-bold text-[1rem] hover:opacity-[0.7] transition-all ease-in-out duration-[0.7s]">Fale Conosco</a></li>
+            <li><button class="bg-transparent border-[3px] border-[#0A1340] font-bold text-[1.2rem] hover:bg-[#0A1340] hover:text-white transition-all ease-in-out duration-[0.4s] rounded-[1rem] p-2 w-[100%]"><a href="../html/login.html">Cadastre-se</a></button></li>
+        </ul>
+    </nav>
+    <!-- CRIAÇÃO DA SECTION HERO  -->
+     <main id="Home" class="bg-[#F2F2F2] w-full flex items-center justify-between max-lg:flex-col max-lg:py-10" style="min-height: calc(100vh - 127.2px);">
+        <div class="flex flex-col w-[60%] items-baseline justify-center gap-4 px-8 max-lg:items-start max-lg:w-full">
+            <img src="../image/logo.png" class="w-[30rem]" alt="">
+            <div>
+                <h1 class="font-bold text-[#0A1340] text-[1.7rem]">Inovação que move sua empresa adiante!</h1>
+                <h3 class="text-[#837B7B] text-[1.3rem] font-semibold">Sistema de Gestão Logística  e Manutenção de Frota</h3>
+            </div>
+            <p class="text-[#837B7B] w-[100%] font-bold">
+                O gerenciamento de frotas é essencial para garantir eficiência no transporte e logística. Com um 
+                controle adequado dos veículos, é possível obter significativas economias. Tecnologias modernas pe
+                rmitem monitorar a performance dos veículos em tempo real, facilitando a manutenção preventiva e a 
+                gestão de combustível. A análise de dados sobre motoristas e o uso dos veículos ajuda a otimizar rotas
+                e reduzir custos. Além disso, um bom sistema de gestão aumenta a segurança e garante conformidade com 
+                as regulamentações.
+            </p>
+            <button class="w-auto h-auto p-2 bg-[#0A1340] rounded-[1rem] max-lg:mb-[5rem]"><a href="../html/manutencao.html" class="flex items-center font-bold text-white text-[2rem] gap-1 justify-center">Manutenção Preventiva <i class="fa-solid fa-arrow-right"></i></a></button>
+        </div>
+        <div class="flex items-center justify-center max-lg:w-full max-lg:justify-end">
+            <img src="../image/veiculos.png" alt="">
+        </div>
+     </main>
+    <!-- CRIAÇÃO DA SECTION DE INTEGRANTES -->
+    <section id="QuemSomos" class="w-full min-h-[90vh] max-lg:py-20 bg-[#F2F2F2]">
+        <div class="bg-[#C9C6C6] w-[80%] max-lg:w-[98%] h-[5rem] rounded-br-[1rem] rounded-tr-[1rem] shadow flex items-center justify-start px-4 max-lg:h-auto">
+            <h3 class="text-[#0A1340] font-bold text-[2.1rem]">Conheça a equipe de dev’s responsáveis pelo FrotaTech !</h3>
+        </div>
+        <!-- CARROSSEL DOS INTEGRANTES -->
+        <div class="relative w-full max-w-7xl mx-auto mt-[5rem] max-lg:mt-[4rem] max-lg:mt-[7rem] px-4">
+            <div class="carousel flex items-center space-x-4 overflow-x-auto">
+                <div class="carousel-item flex-none w-[350px] bg-white p-4 rounded-lg shadow-md">
+                    <img src="../image/odete.png" alt="Integrante 1" class="w-full object-contain">
+                </div>
+                <div class="carousel-item flex-none w-[350px] bg-white p-4 rounded-lg shadow-md">
+                    <img src="../image/clarice.png" alt="Integrante 2" class="w-full object-contain">
+                </div>
+                <div class="carousel-item flex-none w-[350px] bg-white p-4 rounded-lg shadow-md">
+                    <img src="../image/thaemilly.png" alt="Integrante 3" class="w-full object-contain">
+                </div>
+                <div class="carousel-item flex-none w-[350px] bg-white p-4 rounded-lg shadow-md">
+                    <img src="../image/gabriel.png" alt="Integrante 4" class="w-full object-contain">
+                </div>
+                <div class="carousel-item flex-none w-[350px] bg-white p-4 rounded-lg shadow-md">
+                    <img src="../image/mariaClara.png" alt="Integrante 4" class="w-full object-contain">
+                </div>
+                <div class="carousel-item flex-none w-[350px] bg-white p-4 rounded-lg shadow-md">
+                    <img src="../image/tairis.png" alt="Integrante 4" class="w-full object-contain">
+                </div>
+            </div>
+
+            <!-- Botões de navegação -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#0A1340] text-white p-2 rounded-full focus:outline-none" onclick="moveCarousel(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#0A1340] text-white p-2 rounded-full focus:outline-none" onclick="moveCarousel(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+     </section>
+    <!-- CRIAÇÃO DA SECTION DE AVALICÃO -->
+     <section id="Avaliacao" class="w-full min-h-[100vh] bg-[#F2F2F2] flex items-center justify-center px-1">
+        <div class="grid grid-cols-3 gap-[6rem] max-md:grid-cols-2 max-sm:grid-cols-1">
+            <article class="w-[300px] rounded-[5.97px] bg-[#0A1340] flex flex-col items-center justify-center gap-4 px-1 py-4 shadow-md px-3">
+                <img src="../image/cliente-01.png" class="max-lg:w-[10rem]" alt="imagem cliente">
+                <img src="../image/estrelass.png" class="rounded-full w-[14rem]" alt="imagem-estrelas-avaliação">
+                <h3 class="font-bold text-white text-[2rem]">Flavia Andrade</h3>
+                <p class="text-[#777070] text-left"><i>"O sistema ajuda a otimizar rotas e reduzir custos operacionais, aumentando a produtividade da frota."</i></p>
+            </article>
+            <article class="w-[300px] rounded-[5.97px] bg-[#0A1340] flex flex-col items-center justify-center gap-4 px-1 py-4 shadow-md px-3">
+                <img src="../image/cliente-02.png" class="max-lg:w-[10rem]" alt="imagem cliente">
+                <img src="../image/estrelass.png" class="rounded-full w-[14rem]" alt="imagem-estrelas-avaliação">
+                <h3 class="font-bold text-white text-[2rem]">Inácio Souza</h3>
+                <p class="text-[#777070] text-left"><i>"Monitora o comportamento dos motoristas, alertando para riscos e ajudando a garantir a segurança no trânsito."</i></p>
+            </article>
+            <article class="w-[300px] rounded-[5.97px] bg-[#0A1340] flex flex-col items-center justify-center gap-4 px-1 py-4 shadow-md px-3">
+                <img src="../image/cliente-03.png" class="max-lg:w-[10rem]" alt="imagem cliente">
+                <img src="../image/estrelass.png" class="rounded-full w-[14rem]" alt="imagem-estrelas-avaliação">
+                <h3 class="font-bold text-white text-[2rem]">Fabrício Ferreira</h3>
+                <p class="text-[#777070] text-left"><i>"Permite o agendamento de manutenções preventivas, prolongando a vida útil dos veículos e evitando custos com quebras inesperadas."</i></p>
+            </article>
+        </div>
+     </section>
+     <!-- CRIAÇÃO DA SECTION FALE CONOSCO  -->
+      <section id="FaleConosco" class="flex items-center justify-center w-full min-h-[100vh] bg-[#F2F2F2] px-4 py-10 max-md:pt-[4rem]">
+        <div class="flex items-center flex-col justify-center gap-4">
+            <h1 class="font-bold text-[#0A1340] text-[2.5rem] max-md:text-left">Estamos aqui para ajudar!</h1>
+        <p class="text-[#696464] font-bold text-[1.3rem] w-[80%] text-center max-md:text-left max-md:w-[100%]">
+            Se você tem perguntas, sugestões ou precisa 
+            de assistência, nossa equipe está pronta para ajudar.
+        </p>
+        <h1 class="font-bold text-[#0A1340] text-[1.5rem]">Preencha o formulário abaixo e responderemos o mais breve possível.</h1>
+        <form action="" class="w-full flex flex-col gap-4 ">
+            <input class="bg-[#D9D9D9] h-12 outline-none  py-3 w-[100%] px-4 focus:border-[2px] focus:border-[#0A1340] placeholder:italic transition-all ease-in-out duration-[0.1s] placeholder:text-[#777070] placeholder:font-[400] text-[#0A1340] font-[500]" placeholder="Nome da Empresa" type="text">
+            <input class="bg-[#D9D9D9] h-12 outline-none  py-3 w-[100%] px-4 focus:border-[2px] focus:border-[#0A1340] placeholder:italic transition-all ease-in-out duration-[0.1s] placeholder:text-[#777070] placeholder:font-[400] text-[#0A1340] font-[500]" placeholder="E-mail" type="email">
+            <input class="bg-[#D9D9D9] h-12 outline-none  py-3 w-[100%] px-4 focus:border-[2px] focus:border-[#0A1340] placeholder:italic transition-all ease-in-out duration-[0.1s] placeholder:text-[#777070] placeholder:font-[400] text-[#0A1340] font-[500]" placeholder="Assunto" type="text">
+            <textarea name="" class="p-4 w-[100%] h-[10rem] bg-[#D9D9D9] outline-none text-[#0A1340] font-[400] focus:border-[2px] focus:border-[#0A1340] placeholder:italic transition-all ease-in-out duration-[0.1s] placeholder:text-[#777070] font-[500] placeholder:font-[500]" placeholder="Mensagem" id="" style="textarea::placeholder { font-style: italic; }"></textarea>
+            <div class="w-full flex items-center justify-center">
+                <button type="submit" class="bg-[#0A1340] font-bold text-[1.3rem] w-[100%] text-white py-2 rounded-[5.97px]">ENVIAR</button>
+            </div>
+        </form>
+        </div>
+      </section>
+      <!-- CRIAÇÃO DO FOOTER  -->
+       <footer class="w-full h-[8rem] bg-[#0A1340] flex flex-col items-center justify-center gap-4">
+        <div class="font-[400] text-white text-center">&copy2025 FrotaTech. Todos os direitos reservados.</div>
+        <div class="flex items-center gap-8 justify-center">
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+       </footer>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/carrosel.js"></script>
+</body>
+
+</html>

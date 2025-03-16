@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CONFIGURAÇÕES GOLOBAIS CSS  -->
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- LINK DA BIBLIOTECA FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- LINK DO TAIWIND PARA ESTILIZAÇÃO -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../image/logocaminhao.png" type="image/x-icon">
+    <title>FROTA-TECH</title>
+</head>
+
+<body>
+    <header class="flex flex-col w-full h-auto">
+        <!-- PARTE DAS INFORMAÇÃOES DA EMPRESA -->
+        <div
+            class="bg-[#0A1340] w-full h-[50%] flex gap-4 items-center px-4 max-sm:flex-col max-sm:gap-1 max-sm:py-2 max-sm:items-start">
+            <div class="flex gap-2 items-baseline justify-center py-4 max-sm:py-0">
+                <i class="fa-solid fa-envelope text-white text-[0.7rem]"></i>
+                <p class="text-white text-[0.7rem]">startupfrotatech@gmail.com</p>
+            </div>
+            <div class="flex gap-2 items-baseline justify-center">
+                <i class="fa-brands fa-whatsapp text-white text-[0.7rem]"></i>
+                <p class="text-white text-[0.7rem]">+55 (85) 99832-7277</p>
+            </div>
+        </div>
+    </header>
+    <!-- PARTE DAS INFORMAÇÃOES DE NAVEGAÇÃO  -->
+    <div
+        class="flex items-center shadow justify-between w-full h-auto p-4 bg-[#D9D9D9] shadow max-md:items-start max-md:justify-start max-md:flex-col max-md:gap-4">
+        <div class="flex items-center justify-center gap-4">
+            <img src="../image/caminhao.png" alt="">
+            <div class="flex items-center justify-center gap-4">
+                <a href="etapa.html" class="text-[1.8rem]">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <div class="flex flex-col items-start leading-[20px] justify-center">
+                    <p class="text-[1.1rem] font-bold text-[#837B7B] ">Etapas</p>
+                    <p class="text-[1.1rem] font-bold text-[#0A1340]">Relatório</p>
+                </div>
+            </div>
+        </div>
+        <div
+            class="flex items-center justify-center gap-4 max-md:flex-col max-md:gap-4 max-md:items-start max-md:w-full">
+            <button
+                class="bg-[#0A1340] w-auto font-bold text-white text-[1.2rem] p-2 px-4 rounded-[1.2rem] max-md:w-full"><a
+                    href="relatorio.html">Relatório</a></button>
+        </div>
+    </div>
+    <!-- CRIAÇÃO DA SECTION RELATÓRIO -->
+    <section class="bg-[#F2F2F2] w-full min-h-[100vh] flex flex-col gap-10 items-center justify-start py-10">
+        <div class="flex flex-col">
+            <div class="flex flex-col gap-1 mb-[2rem] flex items-center justify-center text-center">
+                <h1 class="font-bold text-[#0A1340] text-[2rem]">Relatório - Registro de Manutenções</h1>
+                <p class="text-[#837B7B] font-bold w-[60%]">
+                    Esse relatório apresenta os registros de manutenções preventivas dos
+                    veículos efetuados, considerando o período selecionado.</p>
+            </div>
+            <div class="flex flex-col w-full p-10 h-auto bg-[#777070] bg-opacity-20">
+                <label for="" class="font-[400] text-black">Veículo</label>
+                <select name="" class="border-[1.5px] border-[#777070] bg-transparent py-4" id="">
+                    <option value="Selecione">Selecione</option>
+                    <option value="veiculoA">veiculo A</option>
+                    <option value="veiculoA">veiculo B</option>
+                </select>
+                <label for="">Selecione o período</label>
+                <input type="date" class="border-[1.5px] border-[#777070] bg-transparent py-4">
+                <div class="w-full flex items-center justify-center p-3">
+                    <button class="bg-[#0A1340] text-white font-bold text-[1.3rem] p-3 rounded-[1.4rem] w-[50%]"><i
+                            class="fa-solid fa-file-pdf"></i> Gerar PDF</button>
+                </div>
+            </div>
+        </div>
+        <div class="container w-full flex items-center justify-center mx-auto p-4">
+            <table class="w-[80%] text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-300">
+                        <th class="py-4 px-6 font-bold text-[#0A1340]"><i class="fas fa-th"></i> Veículo</th>
+                        <th class="py-4 px-6 font-bold text-[#0A1340]"><i class="fas fa-th"></i> Manutenções</th>
+                        <th class="py-4 px-6 font-bold text-[#0A1340]"><i class="fas fa-calendar-alt"></i> Data</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="w-full h-12 bg-gray-200">
+                        <td class="py-4 px-6">Veículo A</td>
+                        <td class="py-4 px-6">Troca de óleo</td>
+                        <td class="py-4 px-6">10/03/2024</td>
+                    </tr>
+                    <tr class="w-full h-12 bg-gray-300">
+                        <td class="py-4 px-6">Veículo B</td>
+                        <td class="py-4 px-6">Alinhamento</td>
+                        <td class="py-4 px-6">15/03/2024</td>
+                    </tr>
+                    <tr class="w-full h-12 bg-gray-200">
+                        <td class="py-4 px-6">Veículo C</td>
+                        <td class="py-4 px-6">Revisão Completa</td>
+                        <td class="py-4 px-6">20/03/2024</td>
+                    </tr>
+                    <tr class="w-full h-12 bg-gray-300">
+                        <td class="py-4 px-6">Veículo D</td>
+                        <td class="py-4 px-6">Troca de freios</td>
+                        <td class="py-4 px-6">25/03/2024</td>
+                    </tr>
+                    <tr class="w-full h-12 bg-gray-200">
+                        <td class="py-4 px-6">Veículo E</td>
+                        <td class="py-4 px-6">Troca de pneus</td>
+                        <td class="py-4 px-6">30/03/2024</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+    <!-- CRIAÇÃO DO FOOTER  -->
+    <footer class="w-full h-[8rem] bg-[#0A1340] flex flex-col items-center justify-center gap-4">
+        <div class="font-[400] text-white text-center">&copy2025 FrotaTech. Todos os direitos reservados.</div>
+        <div class="flex items-center gap-8 justify-center">
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

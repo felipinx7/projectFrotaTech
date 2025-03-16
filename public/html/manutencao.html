@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CONFIGURAÇÕES GOLOBAIS CSS  -->
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- LINK DA BIBLIOTECA FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- LINK DO TAIWIND PARA ESTILIZAÇÃO -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../image/logocaminhao.png" type="image/x-icon">
+    <title>FROTA-TECH</title>
+</head>
+
+<body>
+    <header class="flex flex-col w-full h-auto">
+        <!-- PARTE DAS INFORMAÇÃOES DA EMPRESA -->
+        <div
+            class="bg-[#0A1340] w-full h-[50%] flex gap-4 items-center px-4 max-sm:flex-col max-sm:gap-1 max-sm:py-2 max-sm:items-start">
+            <div class="flex gap-2 items-baseline justify-center py-4 max-sm:py-0">
+                <i class="fa-solid fa-envelope text-white text-[0.7rem]"></i>
+                <p class="text-white text-[0.7rem]">startupfrotatech@gmail.com</p>
+            </div>
+            <div class="flex gap-2 items-baseline justify-center">
+                <i class="fa-brands fa-whatsapp text-white text-[0.7rem]"></i>
+                <p class="text-white text-[0.7rem]">+55 (85) 99832-7277</p>
+            </div>
+        </div>
+    </header>
+    <!-- PARTE DAS INFORMAÇÃOES DE NAVEGAÇÃO  -->
+    <div
+        class="flex items-center shadow justify-between w-full h-auto p-4 bg-[#D9D9D9] shadow max-md:items-start max-md:justify-start max-md:flex-col max-md:gap-4">
+        <div class="flex items-center justify-center gap-4">
+            <img src="../image/caminhao.png" alt="">
+            <div class="flex items-center justify-center gap-4">
+                <a href="login.html" class="text-[1.8rem]">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <div class="flex flex-col items-start leading-[20px] justify-center">
+                    <p class="text-[1.1rem] font-bold text-[#837B7B] ">Manutenção</p>
+                    <p class="text-[1.1rem] font-bold text-[#0A1340]">Nova Manutenção</p>
+                </div>
+            </div>
+        </div>
+        <div
+            class="flex items-center justify-center gap-4 max-md:flex-col max-md:gap-4 max-md:items-start max-md:w-full">
+            <button
+                class="bg-[#0A1340] w-auto font-bold text-white text-[1.2rem] p-2 px-4 rounded-[1.2rem] max-md:w-full"><a
+                    href="etapa.html">Etapas</a></button>
+            <button
+                class="bg-[#0A1340] w-auto font-bold text-white text-[1.2rem] p-2 rounded-[1.2rem] max-md:w-full">Salvar
+                Manutenção</button>
+        </div>
+    </div>
+    <!-- CRIAÇÃO DA SECTION PRINCIPAL  -->
+    <section class="bg-[#F2F2F2] flex items-start justify-between w-full min-h-[100vh]">
+        <div class="bg-[#C9C6C6] bg-opacity-30 p-8 overflow-y-auto w-[30%] h-[40%] flex flex-col gap-8">
+            <div>
+                <p class="text-[#0A1340] text-[1.2rem] font-bold py-2">Veículo</p>
+                <div class="relative border-[2px] rounded-[10px] border-[#837B7B] w-[15rem] py-[0.4rem] px-[0.5rem] h-[4rem] items-center justify-center bg-transparent overflow-hidden">
+
+                    <input type="text" value="Nome do Carro"
+                        class="bg-transparent font-semibold px-1 outline-none">
+                    <p class="font-[400] text-[#777070]">Placa do carro</p>
+                </div>
+            </div>
+            <div>
+                <p class="text-[#0A1340] text-[1.2rem] font-bold">Detalhes</p>
+                <div class="flex flex-col">
+                    <label for="Situação" class="py-2">Situação</label>
+                    <select name="" class="p-2 bg-transparent border[1px] w-[55%]" id="">
+                        <option value="">Selecione</option>
+                        <option value="muitoCritico">Muito Crítico</option>
+                        <option value="Critico">Crítico</option>
+                        <option value="Intermediario">Intermediário</option>
+                    </select>
+                </div>
+
+            </div>
+            <div>
+                <p class="text-[#0A1340] text-[1.2rem] font-bold">Indisponibilidade <i
+                        class="fa-solid fa-circle-question text-[#0A1340]"></i></p>
+                <div class="flex flex-col">
+                    <label for="Situação" class="py-2">Saída da empresa </label>
+                    <input type="date"
+                        class="w-[55%]  py-2 bg-transparent font-semibold border-[2px] border-[#777070] outline-none">
+                    <label for="Situação" class="py-2">Retorno para empresa </label>
+                    <input type="date"
+                        class="w-[55%] py-2 bg-transparent font-semibold border-[2px] border-[#777070] outline-none">
+                </div>
+
+            </div>
+            <div>
+                <p class="text-[#0A1340] text-[1.2rem] font-bold">Serviço </p>
+                <div class="flex flex-col">
+                    <label for="Situação" class="py-2">Número da Ordem de Serviço <i
+                            class="fa-solid fa-circle-question text-[#0A1340]"></i></label>
+                    <input type="text"
+                        class="text-[#777070] bg-transparent border-[2px] p-2 placeholder:text-[#777070] border-[#777070] w-[55%]"
+                        placeholder="0000">
+                    <label for="Situação" class="py-2 flex gap-1 items-center">Valor<i
+                            class="fa-solid fa-circle-question text-[#0A1340]"></i></label>
+                    <input type="number"
+                        class="text-[#777070] bg-transparent border-[2px] p-2 placeholder:text-[#777070]  border-[#777070] w-[55%]"
+                        placeholder="00,00">
+                    <label for="Situação" class="py-2">Oficina</label>
+                    <select name="" class="p-2 bg-transparent border[1px] w-[55%]" id="">
+                        <option value="">Selecione</option>
+                        <option value="OficinaA">Oficina A</option>
+                        <option value="OficinaB">Oficina B</option>
+                        <option value="OficinaC">Oficina C</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="flex flex-col">
+                        <label for="Situação" class="py-2">Observações</label>
+                        <textarea class="font-bold p-4 text-[#777070] w-[100%] h-[10rem] border-[2px] border-[#777070] bg-transparent" placeholder="Digite suas observações se necessário"></textarea>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <div class="w-[80%] h-auto flex items-end flex-col justify-end p-10">
+            <div class="flex items-center justify-between w-full">
+                <p class="font-bold">Preventiva</p>
+                <button id="BotaoAdicionar" class="bg-[#0A1340] p-3 rounded-[9.97px] font-bold text-white ">Adicionar Item</button>
+            </div>
+            <div id="ItensDiv" class="relative w-full h-auto flex gap-4 flex-col items-start mt-[1rem]">
+            </div>
+        </div>
+    </section>
+    <!-- CRIAÇÃO DO FOOTER  -->
+    <footer class="w-full h-[8rem] bg-[#0A1340] flex flex-col items-center justify-center gap-4">
+        <div class="font-[400] text-white text-center">&copy2025 FrotaTech. Todos os direitos reservados.</div>
+        <div class="flex items-center gap-8 justify-center">
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="border-[2px] rounded-full border-white flex items-center justify-center w-[3rem] h-[3rem]">
+                <a href="" class="text-white text-[1.8rem]">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+       </footer>
+       <script src="../js/criarCard.js"></script>
+</body>
+
+</html>
